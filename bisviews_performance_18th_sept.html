@@ -165,8 +165,16 @@
             border: 2px solid #dee2e6;
         }
         .comparison-highlight th {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+        .comparison-highlight tr:hover {
+            background-color: #e9eef0;
+            color: rgb(29, 21, 175);
         }
         .comparison-highlight td {
             background: white !important;
@@ -226,7 +234,12 @@
 
             <!-- Create Review Performance -->
             <div class="section">
-                <h2>Create Review API Performance</h2>
+                <h2>API Performance Data</h2>
+            </div>
+
+            <!-- Create Review Performance -->
+            <div class="section">
+                <h3>Create Review</h3>
                 <table>
                     <thead>
                         <tr>
@@ -299,7 +312,7 @@
 
             <!-- Business Signup Performance -->
             <div class="section">
-                <h2>Business Signup API Performance</h2>
+                <h3>Signup - Business</h3>
                 <table>
                     <thead>
                         <tr>
@@ -357,7 +370,7 @@
 
             <!-- Reviewer Signup Performance -->
             <div class="section">
-                <h2>Reviewer Signup API Performance</h2>
+                <h3>Signup - Reviewer</h3>
                 <table>
                     <thead>
                         <tr>
@@ -395,7 +408,7 @@
 
             <!-- System Comparison -->
             <div class="section">
-                <h2>Cross-System Performance Comparison</h2>
+                <h2>Cross-API Performance Comparison</h2>
                 <table class="comparison-highlight">
                     <thead>
                         <tr>
