@@ -264,8 +264,8 @@
 <body>
     <div class="dashboard">
         <div class="header">
-            <h1>BisViews API Performance Analysis</h1>
-            <p>Performance Testing Results - Business Signup, Reviewer Signup & Create Reviews APIs</p>
+            <h1>K6 Load Test Performance Analysis</h1>
+            <p>Performance Testing Results - Create Review, Business Signup & Reviewer Signup APIs</p>
         </div>
         
         <div class="content">
@@ -277,519 +277,418 @@
                     <div class="label">APIs Analyzed</div>
                 </div>
                 <div class="summary-card">
-                    <h3>Load Profiles</h3>
-                    <div class="number">4</div>
-                    <div class="label">Testing Patterns</div>
+                    <h3>Test Tool</h3>
+                    <div class="number">K6</div>
+                    <div class="label">Load Testing Framework</div>
                 </div>
                 <div class="summary-card">
-                    <h3>Max Users Tested</h3>
-                    <div class="number">100</div>
-                    <div class="label">Concurrent Load</div>
+                    <h3>Max Load Tested</h3>
+                    <div class="number">7000</div>
+                    <div class="label">Concurrent Requests</div>
                 </div>
                 <div class="summary-card">
-                    <h3>Critical Issues</h3>
-                    <div class="number">2</div>
-                    <div class="label">Systems Need Optimization</div>
+                    <h3>Total Requests</h3>
+                    <div class="number">54K+</div>
+                    <div class="label">Across All Tests</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Performance data -->
-        <div class="section">
+            <!-- Performance Data Tables -->
             <div class="section">
                 <h2>API Performance Data</h2>
-                <!-- Create Review Performance -->
+                
                 <h3>Create Review</h3>
                 <div class="table-container">
-                <table class="performance-table">
-                    <thead>
-                        <tr>
-                            <th>Load Profile</th>
-                            <th>Users</th>
-                            <th>Duration</th>
-                            <th>Total Requests</th>
-                            <th>Req/Sec</th>
-                            <th>Avg Response (ms)</th>
-                            <th>Min (ms)</th>
-                            <th>Max (ms)</th>
-                            <th>P90 (ms)</th>
-                            <th>P95 (ms)</th>
-                            <th>Error Rate (%)</th>
-                            <th>Performance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="performance-excellent">
-                            <td>Fixed</td><td>5</td><td>5 min</td><td>117</td><td>3.8</td><td>229</td><td>52</td><td>309</td><td>373</td><td>318</td><td>0</td>
-                            <td><span class="metric-badge badge-excellent">Excellent</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Fixed</td><td>10</td><td>5 min</td><td>226</td><td>7.3</td><td>317</td><td>19</td><td>878</td><td>724</td><td>650</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Fixed</td><td>20</td><td>5 min</td><td>446</td><td>14.5</td><td>327</td><td>19</td><td>925</td><td>655</td><td>500</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-warning">
-                            <td>Fixed</td><td>50</td><td>5 min</td><td>643</td><td>20.9</td><td>1013</td><td>20</td><td>1542</td><td>816</td><td>623</td><td>0.23</td>
-                            <td><span class="metric-badge badge-warning">Concerning</span></td>
-                        </tr>
-                        <tr class="performance-critical">
-                            <td>Fixed</td><td>100</td><td>5 min</td><td>804</td><td>26.1</td><td>2184</td><td>20</td><td>6487</td><td>946</td><td>1555</td><td>0 (timeouts)</td>
-                            <td><span class="metric-badge badge-critical">Critical</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>5</td><td>5 min</td><td>82</td><td>2.67</td><td>285</td><td>19</td><td>312</td><td>243</td><td>634</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>10</td><td>5 min</td><td>161</td><td>5.2</td><td>302</td><td>18</td><td>947</td><td>330</td><td>394</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>20</td><td>5 min</td><td>328</td><td>10.7</td><td>280</td><td>18</td><td>314</td><td>563</td><td>674</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-excellent">
-                            <td>Ramp Up</td><td>50</td><td>5 min</td><td>329</td><td>10.7</td><td>219</td><td>22</td><td>055</td><td>296</td><td>652</td><td>0</td>
-                            <td><span class="metric-badge badge-excellent">Excellent</span></td>
-                        </tr>
-                        <tr class="performance-warning">
-                            <td>Ramp Up</td><td>100</td><td>5 min</td><td>575</td><td>24.7</td><td>1120</td><td>19</td><td>2168</td><td>732</td><td>087</td><td>0</td>
-                            <td><span class="metric-badge badge-warning">Concerning</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Spike</td><td>100</td><td>5 min</td><td>541</td><td>17.6</td><td>255</td><td>17</td><td>976</td><td>1530</td><td>841</td><td>0.04</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Peak</td><td>5</td><td>5 min</td><td>60</td><td>1.97</td><td>274</td><td>20</td><td>438</td><td>591</td><td>936</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Load Level</th>
+                                <th>Total Requests</th>
+                                <th>Success Rate (%)</th>
+                                <th>Failure Rate (%)</th>
+                                <th>Avg Response (ms)</th>
+                                <th>P90 (ms)</th>
+                                <th>P95 (ms)</th>
+                                <th>P99 (ms)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="performance-excellent">
+                                <td>500</td><td>501</td><td>100</td><td>0</td><td>343</td><td>365</td><td>402</td><td>493</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>1000</td><td>1002</td><td>100</td><td>0</td><td>333</td><td>347</td><td>363</td><td>499</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>1500</td><td>1501</td><td>100</td><td>0</td><td>341</td><td>358</td><td>371</td><td>467</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>2000</td><td>2016</td><td>100</td><td>0</td><td>342</td><td>357</td><td>459</td><td>799</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>3000</td><td>3032</td><td>100</td><td>0</td><td>330</td><td>346</td><td>360</td><td>524</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-warning">
+                                <td>4000</td><td>4047</td><td>100</td><td>0</td><td>450</td><td>517</td><td>1254</td><td>2626</td>
+                                <td><span class="metric-badge badge-warning">Warning</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>5000</td><td>5062</td><td>99.98</td><td>0.02</td><td>340</td><td>359</td><td>387</td><td>587</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-critical">
+                                <td>6000</td><td>6061</td><td>99.62</td><td>0.38</td><td>339</td><td>358</td><td>387</td><td>536</td>
+                                <td><span class="metric-badge badge-critical">23 Failures</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>7000</td><td>7076</td><td>100</td><td>0</td><td>368</td><td>385</td><td>471</td><td>1063</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- <div class="section"> -->
-                <!-- Business Signup Performance -->
-                <h3>Signup - Business</h3>
+                <h3>Business Signup</h3>
                 <div class="table-container">
-                <table class="performance-table">
-                    <thead>
-                        <tr>
-                            <th>Load Profile</th>
-                            <th>Users</th>
-                            <th>Duration</th>
-                            <th>Total Requests</th>
-                            <th>Req/Sec</th>
-                            <th>Avg Response (ms)</th>
-                            <th>Min (ms)</th>
-                            <th>Max (ms)</th>
-                            <th>P90 (ms)</th>
-                            <th>P95 (ms)</th>
-                            <th>Error Rate (%)</th>
-                            <th>Failed Reqs</th>
-                            <th>Performance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="performance-good">
-                            <td>Fixed</td><td>5</td><td>5 min</td><td>63</td><td>1.84</td><td>507</td><td>27</td><td>2649</td><td>690</td><td>694</td><td>0</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Fixed</td><td>10</td><td>5 min</td><td>112</td><td>3.65</td><td>626</td><td>27</td><td>2236</td><td>788</td><td>410</td><td>0.18</td><td>2</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-excellent">
-                            <td>Fixed</td><td>20</td><td>5 min</td><td>1765</td><td>5.74</td><td>105</td><td>28</td><td>550</td><td>281</td><td>669</td><td>0.17</td><td>3</td>
-                            <td><span class="metric-badge badge-excellent">Excellent</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Fixed</td><td>50</td><td>5 min</td><td>2345</td><td>7.65</td><td>320</td><td>23</td><td>1305</td><td>741</td><td>744</td><td>0.34</td><td>8</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-warning">
-                            <td>Fixed</td><td>100</td><td>5 min</td><td>2496</td><td>8.1</td><td>799</td><td>30</td><td>4328</td><td>493</td><td>996</td><td>0.25</td><td>5</td>
-                            <td><span class="metric-badge badge-warning">Concerning</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>5</td><td>5 min</td><td>43</td><td>1.41</td><td>529</td><td>28</td><td>1267</td><td>376</td><td>795</td><td>0</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>10</td><td>5 min</td><td>84</td><td>2.74</td><td>643</td><td>18</td><td>3370</td><td>965</td><td>1244</td><td>0.65</td><td>3</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-warning">
-                            <td>Ramp Up</td><td>20</td><td>5 min</td><td>154</td><td>5.03</td><td>868</td><td>212</td><td>5116</td><td>1328</td><td>1645</td><td>0.45</td><td>7</td>
-                            <td><span class="metric-badge badge-warning">Concerning</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Load Level</th>
+                                <th>Total Requests</th>
+                                <th>Success Rate (%)</th>
+                                <th>Failure Rate (%)</th>
+                                <th>Avg Response (ms)</th>
+                                <th>P90 (ms)</th>
+                                <th>P95 (ms)</th>
+                                <th>P99 (ms)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="performance-good">
+                                <td>500</td><td>501</td><td>100</td><td>0</td><td>620</td><td>685</td><td>718</td><td>865</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>1000</td><td>1000</td><td>100</td><td>0</td><td>641</td><td>720</td><td>783</td><td>1091</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>1500</td><td>1501</td><td>100</td><td>0</td><td>593</td><td>668</td><td>707</td><td>994</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-warning">
+                                <td>2000</td><td>1999</td><td>99.95</td><td>0.05</td><td>693</td><td>683</td><td>765</td><td>5683</td>
+                                <td><span class="metric-badge badge-warning">1 Timeout</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>3000</td><td>3000</td><td>100</td><td>0</td><td>602</td><td>654</td><td>719</td><td>1241</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>4000</td><td>4001</td><td>100</td><td>0</td><td>576</td><td>620</td><td>645</td><td>763</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>5000</td><td>5001</td><td>100</td><td>0</td><td>561</td><td>612</td><td>639</td><td>715</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>6000</td><td>6001</td><td>99.98</td><td>0.02</td><td>567</td><td>614</td><td>643</td><td>744</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-critical">
+                                <td>7000</td><td>6997</td><td>99.19</td><td>0.81</td><td>660</td><td>638</td><td>679</td><td>1368</td>
+                                <td><span class="metric-badge badge-critical">57 Failures</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- <div class="section"> -->
-                <!-- Reviewer Signup Performance -->
-                <h3>Signup - Reviewer</h3>
+                <h3>Reviewer Signup</h3>
                 <div class="table-container">
-                <table class="performance-table">
-                    <thead>
-                        <tr>
-                            <th>Load Profile</th>
-                            <th>Users</th>
-                            <th>Duration</th>
-                            <th>Total Requests</th>
-                            <th>Req/Sec</th>
-                            <th>Avg Response (ms)</th>
-                            <th>Min (ms)</th>
-                            <th>Max (ms)</th>
-                            <th>P90 (ms)</th>
-                            <th>P95 (ms)</th>
-                            <th>Error Rate (%)</th>
-                            <th>Performance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="performance-warning">
-                            <td>Fixed</td><td>5</td><td>5 min</td><td>43</td><td>1.4</td><td>464</td><td>26</td><td>1290</td><td>868</td><td>681</td><td>0</td>
-                            <td><span class="metric-badge badge-warning">Slow</span></td>
-                        </tr>
-                        <tr class="performance-good">
-                            <td>Ramp Up</td><td>5</td><td>5 min</td><td>82</td><td>2.67</td><td>285</td><td>19</td><td>312</td><td>243</td><td>634</td><td>0</td>
-                            <td><span class="metric-badge badge-good">Good</span></td>
-                        </tr>
-                        <tr class="performance-warning">
-                            <td>Ramp Up</td><td>10</td><td>5 min</td><td>72</td><td>2.36</td><td>528</td><td>29</td><td>355</td><td>197</td><td>108</td><td>0</td>
-                            <td><span class="metric-badge badge-warning">Concerning</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Load Level</th>
+                                <th>Total Requests</th>
+                                <th>Success Rate (%)</th>
+                                <th>Failure Rate (%)</th>
+                                <th>Avg Response (ms)</th>
+                                <th>P90 (ms)</th>
+                                <th>P95 (ms)</th>
+                                <th>P99 (ms)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="performance-good">
+                                <td>500</td><td>500</td><td>100</td><td>0</td><td>577</td><td>658</td><td>779</td><td>1224</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>1000</td><td>1000</td><td>100</td><td>0</td><td>561</td><td>607</td><td>640</td><td>1345</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-excellent">
+                                <td>1500</td><td>1501</td><td>100</td><td>0</td><td>536</td><td>589</td><td>626</td><td>797</td>
+                                <td><span class="metric-badge badge-excellent">Excellent</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>2000</td><td>2001</td><td>100</td><td>0</td><td>556</td><td>615</td><td>658</td><td>946</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>3000</td><td>3000</td><td>99.97</td><td>0.03</td><td>545</td><td>600</td><td>664</td><td>1163</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>4000</td><td>4000</td><td>100</td><td>0</td><td>550</td><td>605</td><td>648</td><td>956</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-good">
+                                <td>5000</td><td>5001</td><td>100</td><td>0</td><td>556</td><td>609</td><td>652</td><td>1110</td>
+                                <td><span class="metric-badge badge-good">Good</span></td>
+                            </tr>
+                            <tr class="performance-critical">
+                                <td>6000</td><td>5995</td><td>99.18</td><td>0.82</td><td>631</td><td>637</td><td>683</td><td>1691</td>
+                                <td><span class="metric-badge badge-critical">49 Failures</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <!-- System Comparison -->
+            <!-- Cross-API Comparison -->
             <div class="section">
                 <h2>Cross-API Performance Comparison</h2>
-                <table class="comparison-highlight">
+                <table>
                     <thead>
                         <tr>
                             <th>Metric</th>
-                            <th>Business Signup (20 users)</th>
-                            <th>Create Review (20 users)</th>
-                            <th>Reviewer Signup (10 users)</th>
+                            <th>Create Review</th>
+                            <th>Business Signup</th>
+                            <th>Reviewer Signup</th>
                             <th>Winner</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Response Time</strong></td>
-                            <td>105ms</td>
-                            <td>327ms</td>
-                            <td>528ms</td>
-                            <td class="winner-cell"><span class="metric-badge badge-excellent">Business Signup</span></td>
+                            <td><strong>Best Avg Response Time</strong></td>
+                            <td>330ms (3K load)</td>
+                            <td>561ms (5K load)</td>
+                            <td>536ms (1.5K load)</td>
+                            <td class="performance-excellent"><span class="metric-badge badge-excellent">Create Review</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Throughput</strong></td>
-                            <td>5.74 req/s</td>
-                            <td>14.5 req/s</td>
-                            <td>2.36 req/s</td>
-                            <td class="winner-cell"><span class="metric-badge badge-excellent">Create Review</span></td>
+                            <td><strong>Most Consistent Performance</strong></td>
+                            <td>±20ms variance</td>
+                            <td>±80ms variance</td>
+                            <td>±50ms variance</td>
+                            <td class="performance-excellent"><span class="metric-badge badge-excellent">Create Review</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Error Rate</strong></td>
-                            <td>0.17%</td>
-                            <td>0%</td>
-                            <td>0%</td>
-                            <td class="winner-cell"><span class="metric-badge badge-excellent">Tie: Create Review & Reviewer</span></td>
+                            <td><strong>Highest Success Rate</strong></td>
+                            <td>99.98% avg</td>
+                            <td>99.79% avg</td>
+                            <td>99.87% avg</td>
+                            <td class="performance-excellent"><span class="metric-badge badge-excellent">Create Review</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Scalability (100 users)</strong></td>
-                            <td>799ms (Concerning)</td>
-                            <td>2184ms (Critical)</td>
-                            <td>Unknown</td>
-                            <td class="winner-cell"><span class="metric-badge badge-good">Business Signup</span></td>
+                            <td><strong>Best P95 Performance</strong></td>
+                            <td>360-471ms</td>
+                            <td>639-783ms</td>
+                            <td>626-779ms</td>
+                            <td class="performance-excellent"><span class="metric-badge badge-excellent">Create Review</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Overall Rating</strong></td>
-                            <td>Good</td>
-                            <td>High Volume, Poor Speed</td>
-                            <td>Needs Testing</td>
-                            <td class="winner-cell"><span class="metric-badge badge-good">Business Signup</span></td>
+                            <td><strong>Scalability (6K+ load)</strong></td>
+                            <td>23 failures at 6K</td>
+                            <td>57 failures at 7K</td>
+                            <td>49 failures at 6K</td>
+                            <td class="performance-good"><span class="metric-badge badge-good">Create Review</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Critical Issue</strong></td>
+                            <td>8.4s spike at 4K</td>
+                            <td>10s timeouts at 2K, 7K</td>
+                            <td>10s timeout at 6K</td>
+                            <td class="performance-warning"><span class="metric-badge badge-warning">All Need Work</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-             <!-- performance/user Comparison -->
+            <!-- Performance Benchmarks -->
             <div class="section">
-                <h2>Performance Targets by User Load</h2>
+                <h2>Performance Benchmarks vs Industry Standards</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th rowspan="2" style="width: 180px;">API</th>
-                            <th rowspan="2" style="width: 180px;">Metrics</th>
-                            <th rowspan="2" style="width: 120px;">Current (100 Users)</th>
-                            <th colspan="4">Target Performance Levels</th>
-                        </tr>
-                        <tr>
-                            <th style="width: 100px;">100 Users</th>
-                            <th style="width: 100px;">500 Users</th>
-                            <th style="width: 100px;">1000 Users</th>
-                            <th style="width: 100px;">5000 Users</th>
+                            <th>API</th>
+                            <th>Metric</th>
+                            <th>Current Performance</th>
+                            <th>Industry Target</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Business Signup API -->
                         <tr>
-                            <td rowspan="6" class="api-header">Business Signup</td>
-                            <td class="metric-label">Avg Response Time (ms)</td>
-                            <td class="current-value">799</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">250</td>
-                            <td class="target-value">300</td>
-                            <td class="target-value">400</td>
+                            <td rowspan="3"><strong>Create Review</strong></td>
+                            <td>Avg Response Time</td>
+                            <td>330-450ms</td>
+                            <td>&lt;200ms</td>
+                            <td><span class="metric-badge badge-warning">Needs Improvement</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">Throughput (RPS)</td>
-                            <td class="current-value">8.1</td>
-                            <td class="target-value">50</td>
-                            <td class="target-value">125</td>
-                            <td class="target-value">250</td>
-                            <td class="target-value">1,250</td>
+                            <td>P95 Response Time</td>
+                            <td>360-471ms (exc. 4K spike)</td>
+                            <td>&lt;500ms</td>
+                            <td><span class="metric-badge badge-excellent">Excellent</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">Error Rate (%)</td>
-                            <td class="current-value">0.25</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.5</td>
-                            <td class="target-value">&lt;1.0</td>
+                            <td>Error Rate</td>
+                            <td>0-0.38%</td>
+                            <td>&lt;0.1%</td>
+                            <td><span class="metric-badge badge-warning">Acceptable</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">P90 (ms)</td>
-                            <td class="current-value">493</td>
-                            <td class="target-value">300</td>
-                            <td class="target-value">400</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">600</td>
+                            <td rowspan="3"><strong>Business Signup</strong></td>
+                            <td>Avg Response Time</td>
+                            <td>560-693ms</td>
+                            <td>&lt;500ms</td>
+                            <td><span class="metric-badge badge-warning">Needs Improvement</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">P95 (ms)</td>
-                            <td class="current-value">996</td>
-                            <td class="target-value">400</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">600</td>
-                            <td class="target-value">800</td>
+                            <td>P95 Response Time</td>
+                            <td>639-783ms</td>
+                            <td>&lt;1000ms</td>
+                            <td><span class="metric-badge badge-good">Good</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">P99 (ms)</td>
-                            <td class="current-value">4,210</td>
-                            <td class="target-value">800</td>
-                            <td class="target-value">1,000</td>
-                            <td class="target-value">1,200</td>
-                            <td class="target-value">1,500</td>
-                        </tr>
-                        
-                        <!-- Reviewer Signup API -->
-                        <tr>
-                            <td rowspan="6" class="api-header">Reviewer Signup</td>
-                            <td class="metric-label">Avg Response Time (ms)</td>
-                            <td class="current-value">528</td>
-                            <td class="target-value">150</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">250</td>
-                            <td class="target-value">350</td>
+                            <td>Error Rate</td>
+                            <td>0-0.81%</td>
+                            <td>&lt;0.1%</td>
+                            <td><span class="metric-badge badge-critical">Poor at 7K</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">Throughput (RPS)</td>
-                            <td class="current-value">2.36</td>
-                            <td class="target-value">25</td>
-                            <td class="target-value">60</td>
-                            <td class="target-value">125</td>
-                            <td class="target-value">625</td>
+                            <td rowspan="3"><strong>Reviewer Signup</strong></td>
+                            <td>Avg Response Time</td>
+                            <td>536-631ms</td>
+                            <td>&lt;500ms</td>
+                            <td><span class="metric-badge badge-warning">Needs Improvement</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">Error Rate (%)</td>
-                            <td class="current-value">0</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.5</td>
-                            <td class="target-value">&lt;1.0</td>
+                            <td>P95 Response Time</td>
+                            <td>626-779ms</td>
+                            <td>&lt;1000ms</td>
+                            <td><span class="metric-badge badge-good">Good</span></td>
                         </tr>
                         <tr>
-                            <td class="metric-label">P90 (ms)</td>
-                            <td class="current-value">197</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">300</td>
-                            <td class="target-value">400</td>
-                            <td class="target-value">500</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">P95 (ms)</td>
-                            <td class="current-value">108</td>
-                            <td class="target-value">250</td>
-                            <td class="target-value">400</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">700</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">P99 (ms)</td>
-                            <td class="current-value">601</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">800</td>
-                            <td class="target-value">1,000</td>
-                            <td class="target-value">1,200</td>
-                        </tr>
-                        
-                        <!-- Create Review API -->
-                        <tr>
-                            <td rowspan="6" class="api-header">Create Review</td>
-                            <td class="metric-label">Avg Response Time (ms)</td>
-                            <td class="current-value">2,184</td>
-                            <td class="target-value">100</td>
-                            <td class="target-value">150</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">300</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">Throughput (RPS)</td>
-                            <td class="current-value">26.1</td>
-                            <td class="target-value">100</td>
-                            <td class="target-value">250</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">2,500</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">Error Rate (%)</td>
-                            <td class="current-value">0.23</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.1</td>
-                            <td class="target-value">&lt;0.5</td>
-                            <td class="target-value">&lt;1.0</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">P90 (ms)</td>
-                            <td class="current-value">946</td>
-                            <td class="target-value">150</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">300</td>
-                            <td class="target-value">450</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">P95 (ms)</td>
-                            <td class="current-value">1,555</td>
-                            <td class="target-value">200</td>
-                            <td class="target-value">300</td>
-                            <td class="target-value">400</td>
-                            <td class="target-value">600</td>
-                        </tr>
-                        <tr>
-                            <td class="metric-label">P99 (ms)</td>
-                            <td class="current-value">7,687</td>
-                            <td class="target-value">500</td>
-                            <td class="target-value">700</td>
-                            <td class="target-value">800</td>
-                            <td class="target-value">1,000</td>
+                            <td>Error Rate</td>
+                            <td>0-0.82%</td>
+                            <td>&lt;0.1%</td>
+                            <td><span class="metric-badge badge-critical">Poor at 6K</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-
+            <!-- Charts Section -->
             <div class="section">
-            <h2>Performance Analysis</h2>
-                <!-- Charts -->
+                <h2>Performance Analysis</h2>
+                
                 <div class="chart-grid">
                     <div class="chart-container">
                         <canvas id="responseTimeChart"></canvas>
                     </div>
                     <div class="chart-container">
-                        <canvas id="throughputChart"></canvas>
+                        <canvas id="successRateChart"></canvas>
                     </div>
                 </div>
 
-                <div class="chart-grid">
-                    <div class="chart-container">
-                        <canvas id="responseTimeComparisonChart"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="systemHealthChart"></canvas>
-                    </div>
-                </div>
-                
                 <!-- <div class="chart-grid">
                     <div class="chart-container">
-                        <canvas id="maxThroughputChart"></canvas>
+                        <canvas id="p95Chart"></canvas>
                     </div>
                     <div class="chart-container">
-                        <canvas id="errorRateChart"></canvas>
+                        <canvas id="p99Chart"></canvas>
                     </div>
                 </div> -->
 
                 <div class="chart-grid">
                     <div class="chart-container">
-                        <canvas id="consistencyChart"></canvas>
+                        <canvas id="responseComparisonChart"></canvas>
                     </div>
                     <div class="chart-container">
-                        <canvas id="percentileChart"></canvas>
+                        <canvas id="reliabilityChart"></canvas>
                     </div>
                 </div>
+
 
                 <div class="chart-grid">
                     <div class="chart-container">
-                        <canvas id="scalingEfficiencyChart"></canvas>
+                        <canvas id="performanceBreakdownChart"></canvas>
                     </div>
                     <div class="chart-container">
-                        <canvas id="capacityEstimationChart"></canvas>
+                        <canvas id="scalabilityChart"></canvas>
                     </div>
                 </div>
+
+                <!-- <div class="chart-grid">
+                    <div class="chart-container">
+                        <canvas id="errorDistributionChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="loadHandlingChart"></canvas>
+                    </div>
+                </div> -->
             </div>
 
-
-            <!-- Executive Summary -->
+            <!-- Summary -->
             <div class="section">
                 <h2>Summary & Recommendations</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>System</th>
-                            <th>Current Status</th>
-                            <th>Optimal Load</th>
-                            <th>Performance Cliff</th>
-                            <th>Critical Issues</th>
+                            <th>API Endpoint</th>
+                            <th>Best Performance</th>
+                            <th>Breaking Point</th>
+                            <th>Key Issue</th>
                             <th>Priority</th>
-                            <th>Recommended Action</th>
+                            <th>Recommendation</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr class="performance-excellent">
+                            <td><strong>Create Review</strong></td>
+                            <td>~340ms avg (up to 5K)</td>
+                            <td>4K (spike), 6K (errors)</td>
+                            <td>8.4s spike at 4K load</td>
+                            <td>Medium</td>
+                            <td>Investigate 4K spike, optimize for 6K+</td>
+                        </tr>
                         <tr class="performance-good">
                             <td><strong>Business Signup</strong></td>
-                            <td><span class="metric-badge badge-good">Stable</span></td>
-                            <td>Up to 20 users</td>
-                            <td>50+ users</td>
-                            <td>800ms delays at 100 users</td>
+                            <td>~560-640ms avg (stable)</td>
+                            <td>7K (57 failures)</td>
+                            <td>10s timeouts at high load</td>
                             <td>Medium</td>
-                            <td>Database optimization</td>
+                            <td>Increase connection pool, optimize DB</td>
                         </tr>
-                        <tr class="performance-critical">
-                            <td><strong>Create Review</strong></td>
-                            <td><span class="metric-badge badge-critical">Critical</span></td>
-                            <td>Up to 20 users</td>
-                            <td>50+ users</td>
-                            <td>2+ second delays kill UX</td>
-                            <td>HIGH</td>
-                            <td>Urgent database & caching optimization</td>
-                        </tr>
-                        <tr class="performance-warning">
+                        <tr class="performance-good">
                             <td><strong>Reviewer Signup</strong></td>
-                            <td><span class="metric-badge badge-unknown">Unknown</span></td>
-                            <td>5 users (inconsistent)</td>
-                            <td>Unknown</td>
-                            <td>Unpredictable performance</td>
+                            <td>~536-577ms avg (stable)</td>
+                            <td>6K (49 failures)</td>
+                            <td>Similar pattern to Business Signup</td>
                             <td>Medium</td>
-                            <td>Comprehensive testing required</td>
+                            <td>Apply same optimizations as Business Signup</td>
                         </tr>
                     </tbody>
                 </table>
@@ -798,146 +697,38 @@
     </div>
 
     <script>
-        // Response Time Comparison Chart
+        const loadLevels = ['500', '1000', '1500', '2000', '3000', '4000', '5000', '6000', '7000'];
+
+        // Response Time Comparison
         const ctx1 = document.getElementById('responseTimeChart').getContext('2d');
         new Chart(ctx1, {
-            type: 'line',
-            data: {
-                labels: ['5 users', '10 users', '20 users', '50 users', '100 users'],
-                datasets: [
-                    {
-                        label: 'Business Signup (Fixed)',
-                        data: [507, 626, 105, 320, 799],
-                        borderColor: '#3498db',
-                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
-                        tension: 0.4,
-                        pointBackgroundColor: '#3498db',
-                        pointBorderColor: '#2980b9',
-                        pointRadius: 6
-                    },
-                    {
-                        label: 'Create Review (Fixed)',
-                        data: [229, 317, 327, 1013, 2184],
-                        borderColor: '#e74c3c',
-                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
-                        tension: 0.4,
-                        pointBackgroundColor: '#e74c3c',
-                        pointBorderColor: '#c0392b',
-                        pointRadius: 6
-                    },
-                    {
-                        label: 'Create Review (Ramp-up)',
-                        data: [285, 302, 280, 219, 1120],
-                        borderColor: '#27ae60',
-                        backgroundColor: 'rgba(39, 174, 96, 0.1)',
-                        tension: 0.4,
-                        pointBackgroundColor: '#27ae60',
-                        pointBorderColor: '#229954',
-                        pointRadius: 6
-                    },
-                    {
-                        label: 'Reviewer Signup (Limited Data)',
-                        data: [464, 528, null, null, null],
-                        borderColor: '#f39c12',
-                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
-                        tension: 0.4,
-                        pointBackgroundColor: '#f39c12',
-                        pointBorderColor: '#e67e22',
-                        pointRadius: 6,
-                        spanGaps: false
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Response Time Comparison Across All APIs',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Response Time (milliseconds)'
-                        },
-                        grid: { color: 'rgba(0,0,0,0.1)' }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Concurrent Users'
-                        },
-                        grid: { color: 'rgba(0,0,0,0.1)' }
-                    }
-                }
-            }
-        });
-
-        // Throughput Chart
-        const ctx2 = document.getElementById('throughputChart').getContext('2d');
-        new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: ['5 users', '10 users', '20 users', '50 users', '100 users'],
+                labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
                 datasets: [
                     {
-                        label: 'Business Signup',
-                        data: [1.84, 3.65, 5.74, 7.65, 8.1],
-                        backgroundColor: '#3498db',
-                        borderColor: '#2980b9',
-                        borderWidth: 2,
-                        borderRadius: 6,
-                        borderSkipped: false,
+                        label: 'Create Review',
+                        data: [343, 333, 341, 342, 330, 450, 340, 339, 368],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 8)',
+                        // tension: 0.4,
+                        // pointRadius: 5
                     },
                     {
-                        label: 'Create Review',
-                        data: [3.8, 7.3, 14.5, 20.9, 26.1],
-                        backgroundColor: '#e74c3c',
-                        borderColor: '#c0392b',
-                        borderWidth: 2,
-                        borderRadius: 6,
-                        borderSkipped: false,
+                        label: 'Business Signup',
+                        data: [620, 641, 593, 693, 602, 576, 561, 567, 660],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 1)',
+                        // tension: 0.4,
+                        // pointRadius: 5
                     },
                     {
                         label: 'Reviewer Signup',
-                        data: [1.4, 2.36, null, null, null],
-                        backgroundColor: '#f39c12',
-                        borderColor: '#e67e22',
-                        borderWidth: 2,
-                        borderRadius: 6,
-                        borderSkipped: false,
+                        data: [577, 561, 536, 556, 545, 550, 556, 631, null],
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 1)',
+                        // tension: 0.4,
+                        // pointRadius: 5
                     }
                 ]
             },
@@ -947,186 +738,105 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'System Throughput Comparison',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
+                        text: 'Average Response Time by Load Level',
+                        font: { size: 16, weight: 'bold' }
                     },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
+                    legend: { position: 'bottom' }
                 },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Requests per Second',
-                            font: { size: 12, weight: 'bold' }
-                        },
-                        grid: { 
-                            color: 'rgba(0,0,0,0.1)',
-                            drawBorder: false
-                        },
-                        ticks: {
-                            font: { size: 11 }
-                        }
+                        title: { display: true, text: 'Response Time (ms)' }
                     },
                     x: {
-                        title: {
-                            display: true,
-                            text: 'Concurrent Users',
-                            font: { size: 12, weight: 'bold' }
-                        },
-                        grid: { 
-                            display: false
-                        },
-                        ticks: {
-                            font: { size: 11 }
-                        }
+                        title: { display: true, text: 'Concurrent Requests' }
                     }
                 }
             }
         });
 
-        // Combined Response Time Comparison
-        const ctx3 = document.getElementById('responseTimeComparisonChart').getContext('2d');
-        new Chart(ctx3, {
-            type: 'bar',
+        // Success Rate Chart
+        const ctx2 = document.getElementById('successRateChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
             data: {
-                labels: ['Business Signup', 'Create Review', 'Reviewer Signup'],
+                labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
                 datasets: [
                     {
-                        label: 'Best Response Time (ms)',
-                        data: [105, 219, 285],
-                        backgroundColor: '#27ae60',
-                        borderColor: '#229954',
-                        borderWidth: 2,
-                        borderRadius: 6,
-                        borderSkipped: false,
+                        label: 'Create Review',
+                        data: [100, 100, 100, 100, 100, 100, 99.98, 99.62, 100],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4,
+                        pointRadius: 5
                     },
                     {
-                        label: 'Worst Response Time (ms)',
-                        data: [868, 2184, 528],
-                        backgroundColor: '#e74c3c',
-                        borderColor: '#c0392b',
-                        borderWidth: 2,
-                        borderRadius: 6,
-                        borderSkipped: false,
+                        label: 'Business Signup',
+                        data: [100, 100, 100, 99.95, 100, 100, 100, 99.98, 99.19],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4,
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'Reviewer Signup',
+                        data: [100, 100, 100, 100, 99.97, 100, 100, 99.18, null],
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                        tension: 0.4,
+                        pointRadius: 5
                     }
                 ]
             },
             options: {
-                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Response Time Range Comparison (Best vs Worst)',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
+                        text: 'Success Rate by Load Level',
+                        font: { size: 16, weight: 'bold' }
                     },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
+                    legend: { position: 'bottom' }
                 },
                 scales: {
-                    x: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Response Time (milliseconds)',
-                            font: { size: 12, weight: 'bold' }
-                        },
-                        grid: { 
-                            color: 'rgba(0,0,0,0.1)',
-                            drawBorder: false
-                        },
-                        ticks: {
-                            font: { size: 11 }
-                        }
-                    },
                     y: {
-                        grid: { 
-                            display: false
-                        },
-                        ticks: {
-                            font: { size: 11 }
-                        }
+                        min: 98,
+                        max: 100.5,
+                        title: { display: true, text: 'Success Rate (%)' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Concurrent Requests' }
                     }
                 }
             }
         });
 
-        // // Max Throughput
-        // const ctx4 = document.getElementById('maxThroughputChart').getContext('2d');
-        // new Chart(ctx4, {
+
+        
+        // // P95 Response Time
+        // const ctx3 = document.getElementById('p95Chart').getContext('2d');
+        // new Chart(ctx3, {
         //     type: 'bar',
         //     data: {
-        //         labels: ['Business Signup', 'Create Review', 'Reviewer Signup'],
-        //         datasets: [{
-        //             label: 'Max Throughput (req/s)',
-        //             data: [8.1, 26.1, 2.67],
-        //             backgroundColor: [
-        //                 'rgba(52, 152, 219, 0.8)',
-        //                 'rgba(231, 76, 60, 0.8)',
-        //                 'rgba(243, 156, 18, 0.8)'
-        //             ],
-        //             borderColor: [
-        //                 '#3498db',
-        //                 '#e74c3c',
-        //                 '#f39c12'
-        //             ],
-        //             borderWidth: 3,
-        //             borderRadius: 8,
-        //             borderSkipped: false,
-        //         }]
+        //         labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
+        //         datasets: [
+        //             {
+        //                 label: 'Create Review',
+        //                 data: [402, 363, 371, 459, 360, 1254, 387, 387, 471],
+        //                 backgroundColor: '#e74c3c'
+        //             },
+        //             {
+        //                 label: 'Business Signup',
+        //                 data: [718, 783, 707, 765, 719, 645, 639, 643, 679],
+        //                 backgroundColor: '#3498db'
+        //             },
+        //             {
+        //                 label: 'Reviewer Signup',
+        //                 data: [779, 640, 626, 658, 664, 648, 652, 683, null],
+        //                 backgroundColor: '#f39c12'
+        //             }
+        //         ]
         //     },
         //     options: {
         //         responsive: true,
@@ -1134,62 +844,46 @@
         //         plugins: {
         //             title: {
         //                 display: true,
-        //                 text: 'Maximum Requests Distribution',
-        //                 font: { size: 16, weight: 'bold' },
-        //                 color: '#2c3e50'
+        //                 text: 'P95 Response Time Comparison',
+        //                 font: { size: 16, weight: 'bold' }
         //             },
-        //             legend: {
-        //                 display: false
-        //             }
+        //             legend: { position: 'bottom' }
         //         },
         //         scales: {
         //             y: {
         //                 beginAtZero: true,
-        //                 title: {
-        //                     display: true,
-        //                     text: 'Requests per Second',
-        //                     font: { size: 12, weight: 'bold' }
-        //                 },
-        //                 grid: { 
-        //                     color: 'rgba(0,0,0,0.1)',
-        //                     drawBorder: false
-        //                 },
-        //                 ticks: {
-        //                     font: { size: 11 }
-        //                 }
+        //                 title: { display: true, text: 'P95 Response Time (ms)' }
         //             },
         //             x: {
-        //                 grid: { 
-        //                     display: false
-        //                 },
-        //                 ticks: {
-        //                     font: { size: 11 }
-        //                 }
+        //                 title: { display: true, text: 'Concurrent Requests' }
         //             }
         //         }
         //     }
         // });
 
-        // // Error Rate Chart
-        // const ctx5 = document.getElementById('errorRateChart').getContext('2d');
-        // new Chart(ctx5, {
-        //     type: 'doughnut',
+        // // P99 Response Time
+        // const ctx4 = document.getElementById('p99Chart').getContext('2d');
+        // new Chart(ctx4, {
+        //     type: 'bar',
         //     data: {
-        //         labels: [
-        //             'Business Signup (0.65%)', 
-        //             'Create Review (0.23%)', 
-        //             'Reviewer Signup (0%)'
-        //         ],
-        //         datasets: [{
-        //             data: [0.65, 0.23, 0.01], 
-        //             backgroundColor: [
-        //                 '#3498db',
-        //                 '#e74c3c', 
-        //                 '#27ae60'
-        //             ],
-        //             borderWidth: 3,
-        //             borderColor: '#fff'
-        //         }]
+        //         labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
+        //         datasets: [
+        //             {
+        //                 label: 'Create Review',
+        //                 data: [493, 499, 467, 799, 524, 2626, 587, 536, 1063],
+        //                 backgroundColor: '#e74c3c'
+        //             },
+        //             {
+        //                 label: 'Business Signup',
+        //                 data: [865, 1091, 994, 5683, 1241, 763, 715, 744, 1368],
+        //                 backgroundColor: '#3498db'
+        //             },
+        //             {
+        //                 label: 'Reviewer Signup',
+        //                 data: [1224, 1345, 797, 946, 1163, 956, 1110, 1691, null],
+        //                 backgroundColor: '#f39c12'
+        //             }
+        //         ]
         //     },
         //     options: {
         //         responsive: true,
@@ -1197,116 +891,47 @@
         //         plugins: {
         //             title: {
         //                 display: true,
-        //                 text: 'Maximum Error Rates Comparison',
-        //                 font: { size: 14, weight: 'bold' }
+        //                 text: 'P99 Response Time Comparison (99th Percentile)',
+        //                 font: { size: 16, weight: 'bold' }
         //             },
-        //             legend: {
-        //                 position: 'bottom',
-        //                 labels: {
-        //                     usePointStyle: true,
-        //                     padding: 15
-        //                 }
+        //             legend: { position: 'bottom' }
+        //         },
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true,
+        //                 title: { display: true, text: 'P99 Response Time (ms)' }
+        //             },
+        //             x: {
+        //                 title: { display: true, text: 'Concurrent Requests' }
         //             }
         //         }
         //     }
         // });
 
-        // System Health Overview
-        const ctx6 = document.getElementById('systemHealthChart').getContext('2d');
-        new Chart(ctx6, {
-            type: 'polarArea',
-            data: {
-                labels: [
-                    'Business Signup (Stable)', 
-                    'Create Review (Critical)', 
-                    'Reviewer Signup (Unknown)'
-                ],
-                datasets: [{
-                    data: [40, 45, 15],
-                    backgroundColor: [
-                        '#3498db',
-                        '#e74c3c',
-                        '#f39c12'
-                    ],
-                    borderWidth: 6,
-                    borderColor: '#fff',
-                    hoverBorderWidth: 8
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        ticks: {
-                            display: false
-                        },
-                        grid: {
-                            color: '#ecf0f1'
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'System Priority Assessment',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                }
-            },
-        });
-
-        // Performance Consistency Chart (Coefficient of Variation)
-        const ctx7 = document.getElementById('consistencyChart').getContext('2d');
-        new Chart(ctx7, {
+        // Performance Breakdown
+        const ctx5 = document.getElementById('performanceBreakdownChart').getContext('2d');
+        new Chart(ctx5, {
             type: 'radar',
             data: {
-                labels: ['Response Time Stability', 'Throughput Consistency', 'Error Rate Predictability', 'Load Handling', 'Overall Reliability'],
+                labels: ['Avg Response', 'Success Rate', 'P95 Performance', 'P99 Performance', 'Scalability'],
                 datasets: [
                     {
-                        label: 'Business Signup',
-                        data: [6, 8, 7, 6, 7], // Calculated from data variability
-                        borderColor: '#3498db',
-                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
-                        fill: true
-                    },
-                    {
                         label: 'Create Review',
-                        data: [3, 6, 9, 4, 5], // High variability in response times
+                        data: [9, 9.5, 7, 6, 8],
                         borderColor: '#e74c3c',
                         backgroundColor: 'rgba(231, 76, 60, 0.2)',
                         fill: true
                     },
                     {
+                        label: 'Business Signup',
+                        data: [6, 9, 8, 5, 7],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                        fill: true
+                    },
+                    {
                         label: 'Reviewer Signup',
-                        data: [4, 5, 10, 2, 5], // Limited data, inconsistent performance
+                        data: [6, 9, 8, 6, 7],
                         borderColor: '#f39c12',
                         backgroundColor: 'rgba(243, 156, 18, 0.2)',
                         fill: true
@@ -1316,242 +941,37 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Overall Performance Comparison (Score out of 10)',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                    legend: { position: 'bottom' }
+                },
                 scales: {
                     r: {
                         beginAtZero: true,
-                        // max: 10,
-                        ticks: {
-                            stepSize: 2,
-                            display: false
-                        },
-                        grid: {
-                            color: '#ecf0f1'
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Performance Consistency Score (Higher = More Consistent)',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                },
-            }
-        });
-
-        // Performance Percentile Analysis
-        const ctx8 = document.getElementById('percentileChart').getContext('2d');
-        new Chart(ctx8, {
-            type: 'line',
-            data: {
-                labels: ['P50 (Median)', 'P90 (ms)', 'P95 (ms)', 'P99 (ms)'],
-                datasets: [
-                    {
-                        label: 'Business Signup (20 users)',
-                        data: [105, 281, 669, 950], // Estimated P50, actual P90, P95, estimated P99
-                        borderColor: '#3498db',
-                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
-                        fill: false,
-                        tension: 0.4
-                    },
-                    {
-                        label: 'Create Review (20 users)',
-                        data: [327, 655, 500, 800], // Average as P50, actual P90, P95, estimated P99
-                        borderColor: '#e74c3c',
-                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
-                        fill: false,
-                        tension: 0.4
-                    },
-                    {
-                        label: 'Reviewer Signup (10 users)',
-                        data: [528, 197, 108, 300], // Inconsistent data pattern
-                        borderColor: '#f39c12',
-                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
-                        fill: false,
-                        tension: 0.4
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Response Time Percentile Distribution',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Response Time (ms)'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Performance Percentiles'
-                        }
+                        max: 10,
+                        ticks: { stepSize: 2 }
                     }
                 }
             }
         });
 
-        // Load Scaling Efficiency
-        const ctx9 = document.getElementById('scalingEfficiencyChart').getContext('2d');
-        new Chart(ctx9, {
-            type: 'bar',
-            data: {
-                labels: ['5→10 Users', '10→20 Users', '20→50 Users', '50→100 Users'],
-                datasets: [
-                    {
-                        label: 'Business Signup Efficiency',
-                        data: [85, 92, 65, 45], // Calculated efficiency percentages
-                        backgroundColor: '#3498db'
-                    },
-                    {
-                        label: 'Create Review Efficiency',
-                        data: [78, 55, 25, 15], // Poor scaling efficiency
-                        backgroundColor: '#e74c3c'
-                    },
-                    {
-                        label: 'Reviewer Signup Efficiency',
-                        data: [60, null, null, null], // Limited data
-                        backgroundColor: '#f39c12'
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Load Scaling Efficiency (Higher = Better Scaling)',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,
-                        title: {
-                            display: true,
-                            text: 'Efficiency Score (%)'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Load Increase Scenarios'
-                        }
-                    }
-                }
-            }
-        });
-
-        // Peak Capacity Estimation
-        const ctx10 = document.getElementById('capacityEstimationChart').getContext('2d');
-        new Chart(ctx10, {
+        // Scalability Chart
+        const ctx6 = document.getElementById('scalabilityChart').getContext('2d');
+        new Chart(ctx6, {
             type: 'doughnut',
             data: {
                 labels: [
-                    'Business Signup: ~150 users', 
-                    'Create Review: ~75 users', 
-                    'Reviewer Signup: ~15 users'
+                    'Create Review: ~5000 optimal',
+                    'Business Signup: ~6000 optimal',
+                    'Reviewer Signup: ~5000 optimal'
                 ],
                 datasets: [{
-                    label: 'Estimated Peak Capacity',
-                    data: [150, 75, 15], // Estimated breaking points
-                    backgroundColor: [
-                        '#3498db',
-                        '#e74c3c',
-                        '#f39c12'
-                    ],
+                    data: [5000, 6000, 5000],
+                    backgroundColor: ['#e74c3c', '#3498db', '#f39c12'],
                     borderWidth: 4,
                     borderColor: '#fff'
                 }]
@@ -1562,54 +982,197 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Estimated Peak Capacity (Concurrent Users)',
-                        font: { size: 16, weight: 'bold' },
-                        color: '#000',
-                        padding: { bottom: 20 }
+                        text: 'Recommended Maximum Load (Concurrent Requests)',
+                        font: { size: 16, weight: 'bold' }
                     },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rect',
-                            padding: 20,
-                            useBorderRadius: false, 
-                            boxWidth: 25,
-                            boxHeight: 25,
-                            font: { 
-                                size: 10, 
-                                weight: 'bold', 
-                                color: '#000' 
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#fff',
-                        font: { weight: 'bold', size: 10 },
-                        formatter: (value) => value,
-                        anchor: 'center',
-                        align: 'center',
-                        offset: 15,  
-                        clamp: true
-                    }
-                },
-                cutout: '50%'
+                    legend: { position: 'bottom' }
+                }
             }
         });
 
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const rows = document.querySelectorAll('tbody tr');
-            rows.forEach(row => {
-                row.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.02)';
-                    this.style.transition = 'transform 0.2s ease';
-                });
-                row.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
+        // Response Time Comparison (Best vs Worst)
+        const ctx7 = document.getElementById('responseComparisonChart').getContext('2d');
+        new Chart(ctx7, {
+            type: 'bar',
+            data: {
+                labels: ['Create Review', 'Business Signup', 'Reviewer Signup'],
+                datasets: [
+                    {
+                        label: 'Best Avg Response (ms)',
+                        data: [330, 561, 536],
+                        backgroundColor: '#27ae60'
+                    },
+                    {
+                        label: 'Worst Avg Response (ms)',
+                        data: [450, 693, 631],
+                        backgroundColor: '#e74c3c'
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Response Time Range (Best vs Worst Performance)',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Response Time (ms)' }
+                    }
+                }
+            }
         });
+
+        // Reliability Score
+        const ctx8 = document.getElementById('reliabilityChart').getContext('2d');
+        new Chart(ctx8, {
+            type: 'polarArea',
+            data: {
+                labels: [
+                    'Create Review (Fast but has spikes)',
+                    'Business Signup (Stable, slower)',
+                    'Reviewer Signup (Similar to Business)'
+                ],
+                datasets: [{
+                    data: [85, 80, 78],
+                    backgroundColor: ['#e74c3c', '#3498db', '#f39c12'],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Overall Reliability Score (out of 100)',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { stepSize: 20 }
+                    }
+                }
+            }
+        });
+
+        // // Error Distribution
+        // const ctx9 = document.getElementById('errorDistributionChart').getContext('2d');
+        // new Chart(ctx9, {
+        //     type: 'bar',
+        //     data: {
+        //         labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
+        //         datasets: [
+        //             {
+        //                 label: 'Create Review Errors',
+        //                 data: [0, 0, 0, 0, 0, 0, 1, 23, 0],
+        //                 backgroundColor: '#e74c3c'
+        //             },
+        //             {
+        //                 label: 'Business Signup Errors',
+        //                 data: [0, 0, 0, 1, 0, 0, 0, 1, 57],
+        //                 backgroundColor: '#3498db'
+        //             },
+        //             {
+        //                 label: 'Reviewer Signup Errors',
+        //                 data: [0, 0, 0, 0, 1, 0, 0, 49, 0],
+        //                 backgroundColor: '#f39c12'
+        //             }
+        //         ]
+        //     },
+        //     options: {
+        //         responsive: true,
+        //         maintainAspectRatio: false,
+        //         plugins: {
+        //             title: {
+        //                 display: true,
+        //                 text: 'Error Count by Load Level',
+        //                 font: { size: 16, weight: 'bold' }
+        //             },
+        //             legend: { position: 'bottom' }
+        //         },
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true,
+        //                 title: { display: true, text: 'Number of Failed Requests' }
+        //             },
+        //             x: {
+        //                 title: { display: true, text: 'Load Level' }
+        //             }
+        //         }
+        //     }
+        // });
+
+        // Load Handling Efficiency
+        const ctx10 = document.getElementById('loadHandlingChart').getContext('2d');
+        new Chart(ctx10, {
+            type: 'line',
+            data: {
+                labels: ['500', '1K', '1.5K', '2K', '3K', '4K', '5K', '6K', '7K'],
+                datasets: [
+                    {
+                        label: 'Create Review Performance Score',
+                        data: [95, 95, 95, 95, 95, 65, 95, 85, 95],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Business Signup Performance Score',
+                        data: [90, 90, 90, 85, 90, 90, 90, 90, 70],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Reviewer Signup Performance Score',
+                        data: [88, 88, 88, 88, 87, 88, 88, 70, null],
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Performance Score Trend (Based on Speed + Reliability)',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Performance Score' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Load Level' }
+                    }
+                }
+            }
+        });
+    
     </script>
 </body>
 </html>
+                
